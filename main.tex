@@ -1,0 +1,44 @@
+\documentclass{article}
+
+\usepackage{fontspec}
+\usepackage[backend=biber]{biblatex}
+\usepackage[english]{babel}
+\usepackage[autostyle,english=american]{csquotes}
+\usepackage{parskip}
+\usepackage{graphicx}
+
+\frenchspacing
+
+\setlength{\parindent}{0cm}
+\setmainfont{Georgia}
+
+\DeclareNameAlias{author}{last-first}
+
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+  \hbox{}\nobreak\hfil(#1)%
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+
+\newsavebox\mybox
+\newenvironment{aquote}[1]
+  {\savebox\mybox{#1}\begin{quote}}
+  {\signed{\usebox\mybox}\end{quote}}
+
+\MakeOuterQuote{"}
+\addbibresource{references.bib}
+
+\title{Digital Encoding of Small Minority Languages}
+\author{Gabe DeFreitas}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\input{intro.tex}
+\input{unicode.tex}
+\input{minority.tex}
+
+\printbibliography
+
+\end{document}

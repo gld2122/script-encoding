@@ -1,0 +1,79 @@
+\section{Two Unicode Stories}
+
+\subsection{Vietnam}
+
+The chapter by \textcite{my13} discusses problems with representing Vietnamese
+minority languages in digital form. See the following key passage:
+
+\begin{aquote}{\textcite{my13}}
+In Vietnam, processing the Vietnamese-Kinh language problems has deployed fairly
+soon, had many results, and has been continued. However, the script problem on
+the computer for the ethnic minority languages has not been interested much.
+Especially, in the explosive development of information and communication
+technologies as well as internet, the services on the internet have been
+relatively familiar to the people in almost all regions of the country.
+\textbf{However, there is not any website in ethnic minority languages.} Even in
+the website of the Committee for Ethnic Minorities Vietnamese CEMA, there is not
+any ethnic minority language, the websites of the locals where the ethnic people
+live are only in Vietnamese-Kinh language, or accompanied by English.
+\end{aquote}
+
+Implementing digital resources in the Vietnamese state language proceeded
+quickly due to adequate resources.  At the time of the paper, although Unicode
+was an established standard for national languages like Vietnamese, as
+Vietnamese typing tools in Unicode had been developed around the turn of the
+century \parencite{nguyen18}. Support lagged behind, however, for Vietnam's minority languages like
+Ede; thus it was necessary to implement an elaborate conversion scheme to
+represent Ede-specific characters. Ede is written using Vietnamese Latin
+characters, but uses a few letters not present in Vietnamese. In essence, the
+authors created an \textit{ad hoc} encoding scheme for the language in their
+Microsoft Word plugin.
+
+For the authors, the crucial aspect of Unicode is portability and
+intercompatibility. Unicode provides an extensible framework; more languages may
+be easily incorporated as standards developed. So instead of the situation
+described by the authors, in which "the script processing of the ethnic minority
+on the computer has only been solved locally for each ethnic language, have not
+been a national unity and have not satisfied the needs of the culture
+development and integration of ethnic minority communities in Vietnam,"
+implementing Unicode solutions for these languages will allow written regional
+languages to operate seamlessly amongst each other and with the national
+language, Vietnamese.
+
+\subsection{Myanmar}
+
+Nearby in Myanmar, a very different story occurred. One early font and encoding
+package for Burmese, Zawgyi, gained early adoption in the country, based on the
+earlier font Myazedi. Burmese script, like other Brahmic abugidas, contains
+base letters with modifications or additions made around the base to signify
+vowels and other features. Although Unicode standard specifies that such
+features should be encoded separately and intelligently rendered into the
+correct output character, this took a while to be widely supported. Myazedi
+instead encoded each form separately resulting in a confusing situation:
+
+\begin{aquote}{\textcite{hotchkiss16}}
+In Zawgyi, there are six different ways to write the word "myo" that render a
+superficially "correct" character, and many more if you allow for "incorrect"
+variations that would look strange but still intelligible to a reader. A
+computer, however, sees these variations as completely different words. Modern
+Unicode, by contrast, has only one code point per element, and will only render
+if the characters are encoded in the correct sequence, meaning that for each
+word there is one and only one encoding.
+\end{aquote}
+
+The other significant problem is that the nonstandard encoding in Myazedi/Zawgyi
+used code space that had been reserved for Myanmar's small languages, like
+Shan, Mon, Kayah, and Karen.
+
+For legacy reasons, however, Zawgyi remained the dominant encoding in the
+country at the time of the article. Smartphones by Samsung and Huawei ship with
+Zawgyi as default, and the popular web portal planet.com.mm, included
+instructions on how to install Zawgyi on your system. Myanmar blogs also offered
+guides for setting up Zawgyi \parencite{hotchkiss16}. It was seen as a
+homegrown, familiar font, in contrast to difficult and foreign Unicode fonts.
+Lack of Unicode adoption, driven by lack of information among common users, is
+limiting Myanmar's participation in modern digital culture and its
+representation of all the linguistic cultures present within its borders: "New
+users in Myanmar unknowingly become part of Zawgyi’s existing user base, without
+knowing the hidden costs that will impede the future of Myanmar’s digital
+society to be sustainable and inclusive." \parencite{liao17}
