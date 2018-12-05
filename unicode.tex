@@ -1,11 +1,14 @@
 \section{What is Unicode}
 
-The unfortunate truth is that your computer can only read, write, or think in 1s
-and 0s. That mean any text a computer deals with must somehow be stored as a
-number; encoding schemes describe how the computer should convert this number
-into a string of characters or vice versa. All computers on a network must
-adhere to the \textit{same} encoding system, lest streams of text be interpreted
-incorrectly and communication failures ensue.
+Unfortunately your computer can only read, write, or think in 1s and 0s. That
+means any text your computer encounters must somehow be stored as a number;
+encoding schemes are standards that describe how the computer should convert a
+number into a string of characters or vice versa. All computers on a network
+must adhere to the \textit{same} encoding system, lest streams of text be
+interpreted incorrectly and communication breakdowns ensue. (The Japanese term
+mojibake ({\jpfont 文字化け}) refers to "the garbled text that is the result of
+text being decoded using an unintended character encoding"
+\parencite{mojibake}.)
 
 The American Standard Code for Information Interchange (ASCII), a 7-bit encoding
 scheme, was released in 1963 and quickly became the worldwide standard for
